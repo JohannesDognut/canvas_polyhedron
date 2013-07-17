@@ -20,7 +20,7 @@
 
 		    camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
 		    camera.position.z = 500;
-
+    
 		    controls = new THREE.TrackballControls( camera );
 		    controls.addEventListener( 'change', render );
 
@@ -57,6 +57,7 @@
 		  }
 		  function animate() {
 		    requestAnimationFrame( animate );
+			cube.rotation.y = 90 * Math.PI / 180;
 		    controls.update();
 		  }
 		  function render() {
